@@ -1,0 +1,6 @@
+# Request:
+geometry_msgs/PoseStamped PoseStamped
+---
+# Response
+nmea_msgs/Sentence GPS_raw
+

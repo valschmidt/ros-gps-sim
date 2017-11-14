@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+#
+# gps_sim_node
+# 
+# A GPS simulator node, that reads output from robot simulation
+# and converts to standard GPS NMEA strings for testing. 
+#
+# Val Schmidt
+# Center for Coastal and Ocean Mapping
+# University of New Hampshire
+# Copyright 2017, All rights reserved.
+
+import GPS_sim.GPS_sim
+import rospy
+
+if __name__ == '__main__':
+    g = GPS_sim.GPS_sim.gps_sim_node()
+    try:
+        g.init_service()
+        g.run()
+    except rospy.ROSInterruptException:
+        print "Error of unknown origin"
+        pass
+
